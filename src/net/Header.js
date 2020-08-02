@@ -5,14 +5,15 @@ class Header {
         var name;
         var required;
         var content;
+        var opts;
 
-        if(typeof args[0] !== 'object') {
+        if (typeof args[0] !== 'object') {
             name = args.shift();
             required = args.shift();
             content = args.shift();
         } else {
-            const opts = args.shift();
-            
+            opts = args.shift();
+
             name = opts.name;
             required = opts.required;
             content = opts.content;

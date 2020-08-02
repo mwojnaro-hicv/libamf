@@ -1,6 +1,6 @@
 'use strict';
 
-const {convertToBuffer} = require('./utils/Utils');
+const {convertToBuffer, constructClass} = require('./utils/Utils');
 const ByteArray         = require('bytearray-node');
 
 const classMap = {
@@ -19,6 +19,10 @@ class AMF {
 
     get classMap() {
         return classMap;
+    }
+
+    constructClass(className) {
+        return constructClass(className);
     }
 
     /**
